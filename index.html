@@ -4,23 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Elvis Hoang's portfolio of access analytics, relational database coursework, and systems troubleshooting projects.">
-  <meta name="theme-color" content="#11192b">
+  <meta name="theme-color" content="#080a0d">
   <title>Elvis Hoang | Information Systems Portfolio</title>
   <style>
-    :root { color-scheme: light; --ink:#11192b; --paper:#f2f4ef; --white:#fff; --muted:#495667; --line:#c9d1cc; --accent:#d9f78b; --green:#31573b; }
+    :root { color-scheme: dark; --ink:#080a0d; --paper:#101317; --surface:#161c23; --text:#f1f7ff; --muted:#bac8d7; --line:#35475a; --accent:#a3d9ff; }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
-    body { margin:0; background:var(--paper); color:var(--ink); font:1rem/1.6 system-ui,sans-serif; }
+    body { margin:0; background:var(--paper); color:var(--text); font:1rem/1.6 system-ui,sans-serif; }
     a { color:inherit; text-underline-offset:.24em; }
     a:hover { text-decoration-thickness:.14em; }
-    a:focus-visible, summary:focus-visible { outline:3px solid #27805b; outline-offset:5px; }
+    a:focus-visible, summary:focus-visible { outline:3px solid var(--accent); outline-offset:5px; }
     h1,h2,h3,p { margin:0; }
     h1,h2,h3 { line-height:1.08; letter-spacing:-.045em; }
     .wrap { width:min(1120px, calc(100% - 48px)); margin-inline:auto; }
-    .skip { position:absolute; top:.5rem; left:.5rem; transform:translateY(-200%); background:white; padding:.5rem; z-index:2; }
+    .skip { position:absolute; top:.5rem; left:.5rem; transform:translateY(-200%); background:var(--accent); color:var(--ink); padding:.5rem; z-index:2; }
     .skip:focus { transform:none; }
-    .top { background:var(--ink); color:var(--white); }
-    .bar { display:flex; align-items:center; justify-content:space-between; gap:1.25rem; padding:1.25rem 0; border-bottom:1px solid #435063; }
+    .top { background:var(--ink); color:var(--text); }
+    .bar { display:flex; align-items:center; justify-content:space-between; gap:1.25rem; padding:1.25rem 0; border-bottom:1px solid var(--line); }
     .brand { display:inline-flex; align-items:center; gap:.75rem; font-weight:750; white-space:nowrap; text-decoration:none; }
     .monogram { display:grid; place-items:center; width:2.3rem; aspect-ratio:1; color:var(--ink); background:var(--accent); border-radius:.6rem; font:700 .8rem ui-monospace,monospace; }
     nav { display:flex; flex-wrap:wrap; gap:.3rem 1.3rem; }
@@ -30,21 +30,23 @@
     .eyebrow { font:700 .86rem/1.45 ui-monospace,monospace; letter-spacing:.07em; text-transform:uppercase; }
     .hero .eyebrow { color:var(--accent); }
     h1 { font-size:clamp(3.7rem,9vw,7rem); margin:.35rem 0 1.25rem; }
-    .lead { max-width:33rem; color:#e1e8ee; font-size:clamp(1.04rem,2vw,1.24rem); }
+    .lead { max-width:33rem; color:var(--muted); font-size:clamp(1.04rem,2vw,1.24rem); }
     .actions { display:flex; flex-wrap:wrap; gap:.8rem 1.4rem; align-items:center; margin-top:1.6rem; }
     .button { display:inline-block; background:var(--accent); color:var(--ink); padding:.65rem 1rem; border-radius:.45rem; font-weight:750; text-decoration:none; }
-    .button:hover { background:#ebffb8; }
-    .feature { border:1px solid #506076; border-radius:1rem; padding:clamp(1.15rem,4vw,2rem); background:#1b2840; }
+    .button:hover { background:#d3edff; }
+    .feature { border:1px solid var(--line); border-radius:1rem; padding:clamp(1.15rem,4vw,2rem); background:var(--surface); }
     .feature h2 { margin:.7rem 0 1rem; font-size:clamp(1.7rem,4vw,2.65rem); }
     .feature p + p { margin-top:.8rem; }
     .feature a { display:inline-block; margin-top:1.2rem; font-weight:700; color:var(--accent); }
     .section { padding-block:clamp(2.7rem,6vw,5.5rem); }
     .section h2 { margin-bottom:1.5rem; font-size:clamp(2.2rem,5vw,3.5rem); }
+    .section-heading { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:.9rem 1.5rem; margin-bottom:1.5rem; }
+    .section-heading h2 { margin:0; }
     .projects { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; align-items:start; }
-    details { border:1px solid var(--line); background:var(--white); border-radius:.85rem; scroll-margin-top:1rem; }
+    details { border:1px solid var(--line); background:var(--surface); border-radius:.85rem; scroll-margin-top:1rem; }
     summary { cursor:pointer; padding:1.4rem; min-height:11rem; }
-    summary::marker { color:var(--green); }
-    summary .eyebrow { color:var(--green); font-size:.75rem; }
+    summary::marker { color:var(--accent); }
+    summary .eyebrow { color:var(--accent); font-size:.75rem; }
     .project-title { display:block; font-size:clamp(1.35rem,3vw,1.8rem); line-height:1.12; letter-spacing:-.035em; margin:.65rem 0; }
     .project-context, .case p, .about p { color:var(--muted); }
     .case { margin:0 1.4rem; padding:1.1rem 0 1.35rem; border-top:1px solid var(--line); }
@@ -55,7 +57,7 @@
     .about h3 { font-size:1.65rem; margin:.3rem 0 1rem; }
     .about ul { margin:0; padding-left:1.2rem; }
     .about li + li { margin-top:.45rem; }
-    .footer { background:var(--ink); color:var(--white); }
+    .footer { background:var(--ink); color:var(--text); }
     .footer .wrap { display:flex; justify-content:space-between; align-items:center; gap:1rem 2rem; flex-wrap:wrap; padding-block:2rem; }
     .footer h2 { font-size:1.75rem; }
     .footer a { margin-right:1.25rem; font-weight:700; }
@@ -88,7 +90,10 @@
   </header>
   <main id="main">
     <section class="wrap section" id="work" aria-labelledby="work-title">
-      <h2 id="work-title">Selected projects</h2>
+      <div class="section-heading">
+        <h2 id="work-title">Selected projects</h2>
+        <a class="button" href="Elvis_Hoang_Resume.pdf" download>Download résumé (PDF)</a>
+      </div>
       <div class="projects">
         <details id="access-review" open>
           <summary><span class="eyebrow">Python · pandas</span><strong class="project-title">OG&amp;E access analytics</strong><span class="project-context">Identity and access case competition, spring 2026</span></summary>
